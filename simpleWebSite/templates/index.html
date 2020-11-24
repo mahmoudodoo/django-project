@@ -17,7 +17,7 @@
               <a class="navbar-brand" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'cv' %}">My CV</a>
+              <a class="nav-link" href="{% url 'basic_app:myCv' %}">My CV</a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -26,8 +26,8 @@
                     </a>
                   
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="{% url 'xo' %}">XO</a>
-                      <a class="dropdown-item" href="{% url 'connect4' %}">Connect 4</a>
+                      <a class="dropdown-item" href="{% url 'basic_app:xo' %}">XO</a>
+                      <a class="dropdown-item" href="{% url 'basic_app:connect4' %}">Connect 4</a>
                     </div>
                   </div>
               </li>
@@ -38,15 +38,16 @@
 
             
             <li class="nav-item ml-auto">
-                <a class="navbar-brand" href="{% url 'register' %}">Register</a>
+                <a class="navbar-brand" href="{% url 'basic_app:register' %}">Register</a>
             </li>
-    
+            {% if user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+         
+            {% else %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'user_login' %}">Login</a>
-            </li>
-              
-
-
+              <a class="nav-link" href="{% url 'basic_app:user_login' %}">Login</a>
+          </li>
+            {% endif %}
           </ul>
 
          

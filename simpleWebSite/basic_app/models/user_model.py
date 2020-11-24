@@ -1,12 +1,8 @@
 from django.db import models
-from django.db.models.fields import EmailField
-from django.forms.widgets import PasswordInput, Widget
+from django.contrib.auth.models import User
 
 
-class User(models.Model):
-
+class UserModel(models.Model):
+    username = models.OneToOneField(User ,on_delete=models.CASCADE)
     first_name = models.CharField(max_length=64)
     last_name =models.CharField(max_length=64)
-    username = models.CharField(max_length=248,unique=True)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=264,default=" ")

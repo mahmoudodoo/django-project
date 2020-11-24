@@ -6,12 +6,12 @@ from basic_app.views import register_view
 from basic_app.views import xo_view
 
 
-
+app_name = 'basic_app'
 
 
 urlpatterns = [
    path('connect4_page/', connect4_view.connect4, name='connect4'),
-   path('cv_page/', cv_view.cv, name="cv"),
+   path('cv_page/', cv_view.myCv, name="myCv"),
    path('login_page/', login_view.user_login, name="user_login"),
    path('register_page/', register_view.register, name="register"),
    path('xo_page/', xo_view.xo, name="xo"),

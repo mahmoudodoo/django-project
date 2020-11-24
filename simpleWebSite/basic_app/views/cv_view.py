@@ -2,5 +2,5 @@ from django.shortcuts import render
 
 
 
-def cv(request):
+def myCv(request):
     return render(request,'cv.html',{})

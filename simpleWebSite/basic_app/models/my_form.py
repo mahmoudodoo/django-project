@@ -1,14 +1,13 @@
 from django import forms
-from basic_app.models.user_model import User
+from django.contrib.auth.models import User
+from basic_app.models.user_model import UserModel
 
 class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
     confirm_password = forms.CharField(widget=forms.PasswordInput())
     class Meta():
         model = User
-        widgets = {
-        'password': forms.PasswordInput(),
-    }
-        fields = ('first_name','last_name','username','email','password')
+        fields = ('username','email','password')
 
 
     def clean(self):
@@ -20,3 +19,7 @@ class UserForm(forms.ModelForm):
             raise forms.ValidationError(
                 "password and confirm_password does not match"
             )
+class UserInfoForm(forms.ModelForm):
+    class Meta():
+        model = UserModel
+        fields = ('first_name','last_name')
