@@ -1,5 +1,76 @@
 {% extends 'index.html'%}
-
+{% load static %}
 {% block block_body %}
-    <h1>My CV</h1>
+<link rel="stylesheet" href="{% static 'css/cv.css' %}">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="media">
+                <img src="{% static 'images/mahmoudProfilePic.png' %}" class="mr-3" alt="No Image ... !!!! ????">
+                <div class="media-body">
+                  <h1>Mahmoud Odeh</h1>
+                  <h2>Websites:</h2>
+                  <a href="https://www.linkedin.com/in/mahmoud-odeh-922bb3188/">https://www.linkedin.com/in/mahmoud-odeh-922bb3188/</a>
+                  <br>
+                  <a href="https://github.com/mahmoudodoo">https://github.com/mahmoudodoo</a>
+                  <br>
+                  <h4>Adress line:</h4>
+                  <h5>
+                    11037 Abu-Nusir ,
+                    Suliman-Tawafsheh Street
+                    Amman, ST 11181
+                    +96279 8334640
+                    mahmoudodeh332@gmail.com
+                  </h5>
+                </div>
+              
+              </div>
+
+              <div class="media">
+                <div class="media-body">
+                    <br>
+                    <br>
+                    <h2>EXPERIENCE:</h2>
+                    <h2>
+                        <strong><p>Ligadata, Amman, Jordan —Big Data OPSEngineering</p></strong>
+                    </h2>
+                    <h4>
+                        <p>
+                            Execute all duties of operations resources and monitor operational input in order to ensure effective project implementation.
+                        </p>
+                        <p>
+                            Analyze and provide technical support to customers using python.
+                        </p>
+                        <p>
+                            Develop strategies in order to further develop a strong working environment .
+                        </p>
+                    </h4>
+
+                    <br>
+                    <br>
+
+                    <strong><h2><p>SmartWay, ِ Amman, Jordan — Odoo Developer Trainee</p></h2></strong>
+                    <h4>
+                        <p>
+                            I learned in this training how to create my own modules and models, How to customize existing Odoo modules and models using python and XML with Odoo 9.
+                        </p>
+                    </h4>
+                    <br>
+                    
+                    <h2>EDUCATION:</h2>
+                    <br>
+                    <h4><p>Al-Zaytoonah UNIVERSITY OF JORDAN, Amman, Jordan — Bachelor's degree, Computer Software Engineering.</p></h4>
+                    <br>
+                    <h2>SKILLS:</h2>
+                    <br>
+                    <h4><p>CSS, Data Entry,HTML, XML, OOP,javascript, Python, SQL,Linux. , Exposure to Odoo,Exposure to Django,Version Control Git,Redux,React Native</p></h4>
+                    <br>
+                    <h2>LANGUAGES:</h2>
+                    <br>
+                    <h4><p>Arabic, English</p></h4>
+                </div>
+
+              </div>
+
+        </div>
+    </div>
 {% endblock %}
