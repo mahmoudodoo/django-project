@@ -14,5 +14,6 @@ In this Project we need to create a simple website kindly check the following:
 3- We will divide this project into tasks:
 	- Initialize (settings,urls,views,templates,paths,user model)
 	- Create a Navigation bar
+	- Add CV, XO and Connect4 Contents
 	- Create Registration Form
 	- Create login form
